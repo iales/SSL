@@ -12,3 +12,7 @@ Programa que imprime `Hello, World!` en la terminal.
                 (Para guardar el contenido en output.txt se ejecuto ./a> output.txt en la terminal )
 ## Compilador
 GCC "GNU Compiler Collection"
+
+## Para verificar el estandar de C, se Uso:
+echo | gcc -dM -E -x c - | grep __STDC_VERSION__
+#define __STDC_VERSION__ 201710L
