@@ -15,11 +15,16 @@ GCC "GNU Compiler Collection"
 
 version: 14.2.0
 
-Version de C que compila: hasta C2x inclusive
+Version de C que compila: hasta C17 inclusive
 
 ## Para verificar el estandar de C, se Uso:
-Para verificar hasta que version de C compila:
+$ echo | gcc -dM -E -x c - | grep __STDC_VERSION__
 
-Abri una terminal y empece a probar diversas versiones de C mediante el comando "gcc -std=(version de c a probar) hello.c -o hello.exe" hasta llegar a la version c23, tambien conocida como C2x.
+#define __STDC_VERSION__ 201710L
+ 201710L significa Significa C17 (ISO/IEC 9899:2018) 
 
-Como fui capaz de ejecutar "gcc -std=c23 hello.c -o hello.exe" sin problemas, y sin recibir errores, pude concluir que hasta esa version podia compilar.
+Para verificar:
+
+Abri una terminal y empece a probar diversas versiones de C mediante el comando "gcc -std=(version de c a probar) hello.c -o hello.exe" hasta llegar a la version c17.
+
+Como fui capaz de ejecutar "gcc -std=c17 hello.c -o hello.exe" sin problemas, y sin recibir errores, pude concluir que hasta esa version podia compilar.
