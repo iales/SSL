@@ -21,6 +21,7 @@ Version de C que compila: hasta C17 inclusive
 $ echo | gcc -dM -E -x c - | grep __STDC_VERSION__
 
 #define __STDC_VERSION__ 201710L
+ 
  201710L significa Significa C17 (ISO/IEC 9899:2018) 
 
 Para verificar:
